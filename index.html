@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Site Estruturado</title>
+   <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        body { font-family: sans-serif; line-height: 1.6;}
+        /* menu verde  */
+        .navbar-custom {
+        background-color: #1b6f2e !important; /* Verde Bootstrap (ou escolha o tom que quiser) */
+        }
+        .navbar-custom .nav-link {
+        color: white !important;
+        transition: 0.3s;
+        }
+        .navbar-custom .nav-link:hover {
+        background-color: white !important;
+        color: #1b6f2e !important;
+        border-radius: 6px;
+        }
+        .navbar-custom .dropdown-menu {
+        background-color: white;
+        border: none;
+        }
+        .navbar-custom .dropdown-item {
+        color: #1b6f2e;
+        }
+        .navbar-custom .dropdown-item:hover {
+        background-color: #1b6f2e;
+        color: white;
+        }
+      </style>
+</head>
+<body>
+  <nav>
+    <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
+            <div class="container">
+              <div class="navbar-brand" style="color: white;" href="">
+                <img src="./imagens/logo_efg.png" class="img-fluid"  width="35" height="35" alt="...">  
+                <b>Escola do Futuro</b>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#inicio"><b>INICIO</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#institucional"><b>INSTITUCIONAL</b></a>
+                  </li>
+                  <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <b>CURSOS</b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#cursos"><b>TODOS OS CURSOS</b></a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#1"><b>TRANSFORMAÇÃO DIGITAL</b></a></li>
+                      <li><a class="dropdown-item" href="#2"><b>DESENVOLVEDOR PYTHON</b></a></li>
+                      <li><a class="dropdown-item" href="#3"><b>CRIAÇÃO DE CONTEÚDO DIGITAL</b></a></li>
+                      <li><a class="dropdown-item" href="#4"><b>E-COMMERCE - LOJA VIRTUAL</b></a></li>
+                      <li><a class="dropdown-item" href="#5"><b>ASSITENTE DE MARKETING</b></a></li>
+                      <li><a class="dropdown-item" href="#6"><b>GESTÃO DE CUSTOS NO AGRO NEGOCIO</b></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://efg.org.br/editaiscursos" target=”_blank”><b>DOWNLOADS</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#contato"><b>CONTATO</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href=""></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://www.instagram.com/" target=”_blank”><b>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                      </svg></b>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://pt-br.facebook.com/" target=”_blank”>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://www.youtube.com/" target=”_blank”>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://web.whatsapp.com/%F0%9F%8C%90/pt_br" target=”_blank”>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav><br>
+  </nav>
+  <main><br>
+    <section id="inicio">
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h1 class="display-4 fst-italic">EFG - LUIZ RASSI<br>Aparecida de Goiânia</h1>
+              </div>
+              <div class="col">
+                <div class="col" style="width: 22rem;">               
+                  <img src="./imagens/banner.png" class="d-block mx-lg-auto img-fluid" alt=""/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="lead my-3"><b>Vários espaços pra você aprender e empreender.</b></p>
+              <p class="lead mb-0">
+                <a href="#cursos"><button class="btn btn-outline-success" ><b>CONHEÇA NOSSOS CURSOS</b></button></a>
+              </p>
+              </div>
+            
+              
+            </div>
+        </div>
+     </div>
+    </section>
+
+     <!-- carrrossel dos cursos 1-->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="background-color: #40804e;"><br>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="12000">
+      <!-- slide 1-->
+       <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <!-- card 1-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c1transformacaodigital.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>TRANSFORMAÇÃO DIGITAL</b></h5>
+                            <p class="card-text">Compreender as necessidades e sentimentos dos usuários, reconhecendo fundamentos do Design Thinking e importância do foco no usuário</p> 
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#1"><button class="btn btn-success" type="button"><b>SAIBA MAIS</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 1-->
+                </div>
+                <div class="col">
+                    <!-- card 2-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c2pythonbasico.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>DESENVOLVEDOR PYTHON</b></h5>
+                            <p class="card-text">Técnicas básicas para criar e melhorar programas de computadores, utilizando a linguagem de programação Python.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#2"><button class="btn btn-success" type="button"><b>SAIBA MAIS</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 2-->
+                </div>
+                <div class="col">
+                    <!-- card 3-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c3criacaoconteudo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>CRIAÇÃO DE CONTEÚDO DIGITAL</b></h5>
+                            <p class="card-text">Aprenda a planejar o conteúdo digital, tirar fotos com maior qualidade, gravar vídeos empolgantes e escrever textos temperados com criatividade.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#3"><button class="btn btn-success" type="button"><b>SAIBA MAIS</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 2-->
+                </div>
+            </div>
+        </div>
+       <!-- Fim slide 1-->
+    </div>
+    <div class="carousel-item" data-bs-interval="9000">
+    <!-- slide 2-->
+     <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <!-- card 1-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c4ecommerce.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>E-COMMERCE - LOJA VIRTUAL</b></h5>
+                            <p class="card-text">Entenda o que fazer para deixar seu e-commerce com aparência profissional e conquistar mais clientes no ramo empresarial.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#4"><button class="btn btn-outline-success" type="button"><b>SAIBA MAIS</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 1-->
+                </div>
+                <div class="col">
+                    <!-- card 2-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c5assitentemarketing.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>ASSITENTE DE MARKETING</b></h5>
+                            <p class="card-text">Neste curso você aprende sobre as técnicas e práticas do Marketing, desenvolve habilidades para pensar e agir.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#5"><button class="btn btn-outline-success" type="button"><b>SAIBA MAIS</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 2-->
+                </div>
+                <div class="col">
+                    <!-- card 3-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c6gestaocustoeficiencia.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>GESTÃO DE CUSTOS NO AGRO</b></h5>
+                            <p class="card-text">No curso de Gestão de Custos e Eficiência no Agronegócio, aprenda a controlar despesas, otimizar processos e aumentar a produtividade.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#6"><button class="btn btn-outline-success" type="button"><b>SAIBA MAIS</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 2-->
+                </div>
+            </div>
+        </div>
+    <!-- Fim slide 2-->
+    </div>
+    <div class="carousel-item">
+      <!-- slide 3-->
+       <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <!-- card 1-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c7desenhoauxiliadocomputador.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>DESENHO POR COMPUTADOR</b></h5>
+                            <p class="card-text">Domine softwares de CAD de engenharia, arquitetura e design. Curso prático e completo para destacar-se no mercado de trabalho.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#contato"><button class="btn btn-success" type="button"><b>MATRICULE-SE</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 1-->
+                </div>
+                <div class="col">
+                    <!-- card 2-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c8experienciadousuariouxuiux.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>EXPERIÊNCIA DO USUÁRIO - UX/UI</b></h5>
+                            <p class="card-text">Acompanhar toda a jornada do cliente, identificando falhas e propondo melhorias que possam garantir a satisfação do cliente.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#contato"><button class="btn btn-success" type="button"><b>MATRICULE-SE</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 2-->
+                </div>
+                <div class="col">
+                    <!-- card 3-->
+                     <div class="card" style="width: 24rem;">
+                        <img src="./imagens/c9gestaodeanuncios.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>GESTÃO DE ANÚNCIOS</b></h5>
+                            <p class="card-text">Aprenda a anunciar no lugar certo, na hora certa, para as pessoas certas! Crie campanhas eficazes e torne seu conteúdo visível para mais pessoas.</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="#contato"><button class="btn btn-success" type="button"><b>MATRICULE-SE</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim card 2-->
+                </div>
+            </div>
+        </div>
+      <!-- Fim slide 3-->
+    </div>
+  </div><br>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- fim carrrossel dos cursos 1-->
+    <section id="institucional">
+      <div class="container text-center"><br>
+        <h1><b>INSTITUCIONAL</b></h1><BR>
+  <div class="row">
+    <div class="col">
+      <div class="col">
+          <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5" style="text-align: justify;">
+              <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+  <div class="feature col">
+    <div
+      class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+  <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
+  <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+</svg>
+    </div>
+    <h3 class="fs-2 text-body-emphasis">Sobre as Escolas</h3>
+    <p style="text-align: justify;">
+      As Escolas do Futuro do Estado de Goiás (EFGs) são uma iniciativa de educação gratuita
+      e de qualidade do Governo de Goiás em parceria com a Universidade Federal de Goiás para
+      você que quer se capacitar profissionalmente, seja para entrar no mercado de trabalho,
+      se recolocar ou ainda montar seu próprio negócio.
+    </p>
+    <a href="#contato"><button class="btn btn-success" type="button"><b>SAIBA MAIS</b></button></a>
+  </div>
+  <div class="feature col">
+    <div
+      class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-flask-fill" viewBox="0 0 16 16">
+  <path d="M11.5 0a.5.5 0 0 1 0 1H11v5.358l4.497 7.36c.099.162.16.332.192.503l.013.063.008.083q.006.053.007.107l-.003.09q-.001.047-.005.095-.006.053-.017.106l-.016.079q-.012.049-.028.096l-.028.086a1.5 1.5 0 0 1-.17.322 1.5 1.5 0 0 1-.395.394q-.04.028-.082.054-.045.026-.095.049l-.073.035-.09.033q-.05.02-.103.034-.04.01-.08.017-.053.012-.108.021l-.006.002-.202.013H1.783l-.214-.015a1.503 1.503 0 0 1-1.066-2.268L5 6.359V1h-.5a.499.499 0 0 1-.354-.854A.5.5 0 0 1 4.5 0zm.5 12a.5.5 0 0 0 0 1h1.885l-.61-1zm-1-2a.5.5 0 0 0 0 1h1.664l-.612-1zm-1-2a.5.5 0 0 0 0 1h1.441l-.61-1zM9 6a.5.5 0 0 0 0 1h1.22l-.147-.24A.5.5 0 0 1 10 6.5V6zm0-2a.5.5 0 0 0 0 1h1V4zm0-2a.5.5 0 0 0 0 1h1V2z"/>
+</svg>
+    </div>
+    <h3 class="fs-2 text-body-emphasis">Propósito</h3>
+    <p style="text-align: justify;">
+      O objetivo das Escolas do Futuro é ajudar Goiás a crescer e a se desenvolver!
+      E fazemos isso através da educação, da arte, da ciência e da tecnologia.
+      Num mundo que está em constante transformação e exige de todos nós reinvenção de saberes,
+       capacitamos pessoas para que elas tenham oportunidades de trabalho.   
+    </p>
+    <a href="#contato"><button class="btn btn-outline-success" ><b>MATRICULE-SE</b></button></a>
+  </div>
+  <div class="feature col">
+    <div
+      class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+      <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+      <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z"/>
+    </svg>
+    </div>
+    <h3 class="fs-2 text-body-emphasis">Quem somos ?</h3>
+    <p style="text-align: justify;">As Escolas foram criadas pela lei n° 20.976/2021 e foram criadas para substituir os Institutos Tecnológicos do Estado de Goiás (ITEGO).
+      Atualmente são geridas por convênio entre a Secretaria de Estado de Ciência, Tecnologia e Inovação (SECTI),
+       a Universidade Federal de Goiás (UFG) e a Fundação de Apoio à Pesquisa (Funape).
+    </p>
+     <a href="#contato"><button class="btn btn-success" type="button"><b>MATRICULE-SE</b></button></a>
+  </div>
+</div>
+          </div>
+        </div>
+    </div>
+    </div><br>
+  
+  </div>
+    </section>
+    <section id="cursos">
+    <div class="container-fluid text-center" style="background-color: #dfebe2;"><br>
+        <h1><b>CURSOS</b></h1><br>
+        <section id="1">
+            <div class="row">
+                <div class="col"><hr class="border border-success border-2 opacity-50">
+                <h2><b>TRANSFORMAÇÃO DIGITAL E PROTOTIPAGEM</b></h2><br><br>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./imagens/c1transformacaodigital.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="row">
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                </svg><b> +16 anos</b></h5>
+                                </div>
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                            </svg><b> 40 horas</b></h5>
+                                </div>
+                                <div class="col">
+                                    <h5 style="background-color: #ffffff;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-walking" viewBox="0 0 16 16">
+                                        <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6.44 3.752A.75.75 0 0 1 7 3.5h1.445c.742 0 1.32.643 1.243 1.38l-.43 4.083a1.8 1.8 0 0 1-.088.395l-.318.906.213.242a.8.8 0 0 1 .114.175l2 4.25a.75.75 0 1 1-1.357.638l-1.956-4.154-1.68-1.921A.75.75 0 0 1 6 8.96l.138-2.613-.435.489-.464 2.786a.75.75 0 1 1-1.48-.246l.5-3a.75.75 0 0 1 .18-.375l2-2.25Z"/>
+                                        <path d="M6.25 11.745v-1.418l1.204 1.375.261.524a.8.8 0 0 1-.12.231l-2.5 3.25a.75.75 0 1 1-1.19-.914zm4.22-4.215-.494-.494.205-1.843.006-.067 1.124 1.124h1.44a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.531-.22Z"/>
+                                        </svg> <b>Presencial</b></h5><br>
+                                </div>
+                            </div>
+                            <ul style="text-align: justify;">
+                              <h5><b> Objetivos do curso:</b></h5>
+                                <li class="list-group-item">
+                                  1. Compreender as necessidades e sentimentos dos usuários, reconhecendo os fundamentos do Design Thinking e a importância do foco no usuário;<br>
+                                  2. Definir problemas de design de maneira clara e formulada, desenvolvendo a habilidade de identificar e estruturar desafios complexos;<br>
+                                  3. Utilizar ferramentas de geração criativa de ideias e prototipagem rápida para criar modelos ou protótipos ágeis, testando soluções de forma prática;<br>
+                                  4. Aplicar o pensamento sistêmico para entender interconexões e relações dentro de um sistema, analisando comportamentos e padrões para informar o design;<br>
+                                  5. Implementar pensamento crítico e análise lógica para avaliar ideias e soluções, ajustando abordagens com base em feedback para melhorias contínuas;<br>
+                                  6. Desenvolver projetos inovadores e colaborativos de design, integrando co-criação e experimentação para transformar ideias em soluções viáveis, organizando e executando eficientemente cada fase.
+                                </li>
+                               </ul>
+                    </div>
+                            <p class="text-start"><h4><b><i>Lidere a inovação com tecnologia e criatividade! No curso de Transformação Digital e Prototipagem,
+                                aprenda a implementar mudanças digitais e criar protótipos de soluções inovadoras. Desenvolva habilidades
+                                para transformar ideias em produtos reais e impulsionar sua carreira.</b></i></h4>
+                            </p>
+                            <div class="text-center"><button type="submit" class="btn btn-success" onclick="sendToWhatsapp();" ><b>I N S C R E V A - S E</b></button>
+                            </div><br><br><br>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <section id="2">
+            <div class="row">
+                <div class="col"><hr class="border border-success border-2 opacity-50">
+                <h2><b>DESENVOLVEDOR PYTHON: NÍVEL BÁSICO</b></h2><br><br>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./imagens/c2pythonbasico.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="row">
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                </svg><b> +16 anos</b></h5>
+                                </div>
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                            </svg><b> 40 horas</b></h5>
+                                </div>
+                                <div class="col">
+                                    <h5 style="background-color: #ffffff;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-walking" viewBox="0 0 16 16">
+                                        <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6.44 3.752A.75.75 0 0 1 7 3.5h1.445c.742 0 1.32.643 1.243 1.38l-.43 4.083a1.8 1.8 0 0 1-.088.395l-.318.906.213.242a.8.8 0 0 1 .114.175l2 4.25a.75.75 0 1 1-1.357.638l-1.956-4.154-1.68-1.921A.75.75 0 0 1 6 8.96l.138-2.613-.435.489-.464 2.786a.75.75 0 1 1-1.48-.246l.5-3a.75.75 0 0 1 .18-.375l2-2.25Z"/>
+                                        <path d="M6.25 11.745v-1.418l1.204 1.375.261.524a.8.8 0 0 1-.12.231l-2.5 3.25a.75.75 0 1 1-1.19-.914zm4.22-4.215-.494-.494.205-1.843.006-.067 1.124 1.124h1.44a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.531-.22Z"/>
+                                        </svg> <b>Presencial</b></h5><br>
+                                </div>
+                            </div>
+                            <ul style="text-align: justify;">
+                                <h5><b> Objetivos do curso:</b></h5>
+                                <li class="list-group-item">1. Ambiente de desenvolvimento Python: instalação e configuração do Python em diferentes sistemas operacionais, utilização do interpretador interativo e do editor de código (8h);</li>
+                                <li class="list-group-item">2. Sintaxe básica do Python: regras de sintaxe, indexação e comentários; variáveis, constantes, operadores, expressões e comandos básicos (8h);</li>
+                                <li class="list-group-item">3. Tipos de dados do Python: números, strings, listas, tuplas e dicionários; manipulação de dados com operações, métodos e funções embutidas (8h);</li>
+                                <li class="list-group-item">4. Estruturas condicionais e de repetição do Python: if, elif, else, for, while e break; aplicação de estruturas condicionais e de repetição para controle de fluxo dos programas (8h);</li>
+                                <li class="list-group-item">5. Funções e módulos do Python: definição e utilização de funções e módulos; parâmetros, argumentos, retorno e escopo das funções; importação e utilização de módulos padrão e externos (8h).</li>
+                            </ul>
+                    </div><br>
+                            <p class="text-start"><h4><b><i>Com este curso você aprende técnicas básicas para criar e melhorar programas de computadores, utilizando a linguagem de programação Python.</b></i></h4>
+                            </p>
+                            <div class="text-center"><button type="submit" class="btn btn-success" onclick="sendToWhatsapp();" ><b>I N S C R E V A - S E</b></b></button>
+                            </div><br><br><br>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <section id="3">
+            <div class="row">
+                <div class="col"><hr class="border border-success border-2 opacity-50">
+                <h2><b>CRIAÇÃO DE CONTEÚDO DIGITAL</b></h2><br><br>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./imagens/c3criacaoconteudo.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="row">
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                </svg><b> +16 anos</b></h5>
+                                </div>
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                            </svg><b> 160 horas</b></h5>
+                                </div>
+                                <div class="col">
+                                    <h5 style="background-color: #ffffff;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hand-index-thumb-fill" viewBox="0 0 16 16">
+                                        <path d="M8.5 1.75v2.716l.047-.002c.312-.012.742-.016 1.051.046.28.056.543.18.738.288.273.152.456.385.56.642l.132-.012c.312-.024.794-.038 1.158.108.37.148.689.487.88.716q.113.137.195.248h.582a2 2 0 0 1 1.99 2.199l-.272 2.715a3.5 3.5 0 0 1-.444 1.389l-1.395 2.441A1.5 1.5 0 0 1 12.42 16H6.118a1.5 1.5 0 0 1-1.342-.83l-1.215-2.43L1.07 8.589a1.517 1.517 0 0 1 2.373-1.852L5 8.293V1.75a1.75 1.75 0 0 1 3.5 0"/>
+                                      </svg> <b>On-Line</b></h5><br>
+                                </div>
+                            </div>
+                            <ul style="text-align: justify;">
+                                <h5><b> Objetivos do curso:</b></h5>
+                                <li class="list-group-item">
+                                  1. Conhecer os fundamentos da fotografia digital, gravação e edição de vídeos, redação para conteúdo digital e planejamento de conteúdo;<br>
+                                  2. Entender a importância de criar conteúdo visual e textual de alta qualidade para mídias digitais e como isso impacta a comunicação e o marketing;<br>
+                                  3. Utilizar habilidades práticas para fotografar, gravar e editar vídeos, escrever textos eficazes para mídias digitais e planejar estratégias de conteúdo;<br>
+                                  4. Avaliar a qualidade e eficácia do conteúdo criado, identificando áreas de melhoria e ajustando estratégias para otimizar o impacto na audiência;<br>
+                                  5. Monitorar e medir o desempenho do conteúdo digital, utilizando métricas e análises para aprimorar continuamente as estratégias de marketing digital;
+                                  6. Desenvolver conteúdo digital inovador e atraente, combinando técnicas de fotografia, vídeo, redação e planejamento para atender às necessidades específicas do público-alvo e das plataformas digitais.
+                                </li>
+                            </ul>
+                    </div><br>
+                            <p class="text-start"><h4><b><i>Trabalhe criando conteúdo de qualidade para seus clientes. Aprenda a planejar o conteúdo digital, tirar fotos com maior qualidade, gravar vídeos empolgantes e escrever textos temperados com criatividade.
+                              </b></i></h4>
+                            </p>
+                            <div class="text-center"><button type="submit" class="btn btn-success" onclick="sendToWhatsapp();" ><b>I N S C R E V A - S E</b></button>
+                            </div><br><br><br>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <section id="4">
+            <div class="row">
+                <div class="col"><hr class="border border-success border-2 opacity-50">
+                <h2><b>E-COMMERCE - LOJA VIRTUAL</b></h2><br><br>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./imagens/c4ecommerce.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="row">
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                </svg><b> +16 anos</b></h5>
+                                </div>
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                            </svg><b> 160 horas</b></h5>
+                                </div>
+                                <div class="col">
+                                    <h5 style="background-color: #ffffff;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hand-index-thumb-fill" viewBox="0 0 16 16">
+                                        <path d="M8.5 1.75v2.716l.047-.002c.312-.012.742-.016 1.051.046.28.056.543.18.738.288.273.152.456.385.56.642l.132-.012c.312-.024.794-.038 1.158.108.37.148.689.487.88.716q.113.137.195.248h.582a2 2 0 0 1 1.99 2.199l-.272 2.715a3.5 3.5 0 0 1-.444 1.389l-1.395 2.441A1.5 1.5 0 0 1 12.42 16H6.118a1.5 1.5 0 0 1-1.342-.83l-1.215-2.43L1.07 8.589a1.517 1.517 0 0 1 2.373-1.852L5 8.293V1.75a1.75 1.75 0 0 1 3.5 0"/>
+                                      </svg> <b>On-Line</b></h5><br>
+                                </div>
+                            </div>
+                            <ul style="text-align: justify;">
+                                <h5><b> Objetivos do curso:</b></h5>
+                                <li class="list-group-item">1. Conhecer os fundamentos da fotografia de produtos, design gráfico e SEO, incluindo a compreensão das ferramentas e técnicas básicas usadas em cada área;</li>
+                                <li class="list-group-item">2. Entender a relevância e o impacto da apresentação visual de produtos, do design gráfico e da otimização de conteúdo na eficácia do comércio eletrônico e na experiência do usuário;</li>
+                                <li class="list-group-item">3. Utilizar habilidades práticas para capturar e editar fotografias de produtos, criar designs gráficos atraentes e aplicar técnicas de SEO para melhorar o ranqueamento e a visibilidade online;</li>
+                                <li class="list-group-item">4. Avaliar criticamente a qualidade das fotografias, designs e conteúdo otimizado, identificando áreas de melhoria e ajustando estratégias para atender às necessidades do mercado;</li>
+                                <li class="list-group-item">5. Selecionar as melhores imagens e designs, e monitorar o desempenho do conteúdo otimizado, utilizando métricas e feedback para aprimorar continuamente as estratégias de e-commerce;</li>
+                            </ul>
+                    </div><br>
+                            <p class="text-start"><h4><b><i>Torne-se um especialista em Comércio Eletrônico. Entenda o que fazer para deixar seu e-commerce com aparência profissional e conquistar mais clientes. Aprenda sobre como o comércio eletrônico vem transformando os negócios, os tipos de comércio eletrônico, plataformas de venda digitais e como fornecer o seu produto da melhor maneira, usando a fotografia e o design para valorizar seu empreendimento através de conteúdos bem elaborados.</b></i></h4>
+                            </p>
+                            <div class="text-center"><button type="submit" class="btn btn-success" onclick="sendToWhatsapp();" ><b>I N S C R E V A - S E</b></button>
+                            </div><br><br><br>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <section id="5">
+            <div class="row">
+                <div class="col"><hr class="border border-success border-2 opacity-50">
+                <h2><b>ASSITENTE DE MARKETING </b></h2><br><br>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./imagens/c5assitentemarketing.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="row">
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                </svg><b> +16 anos</b></h5>
+                                </div>
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                            </svg><b> 160 horas</b></h5>
+                                </div>
+                                <div class="col">
+                                    <h5 style="background-color: #ffffff;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hand-index-thumb-fill" viewBox="0 0 16 16">
+                                        <path d="M8.5 1.75v2.716l.047-.002c.312-.012.742-.016 1.051.046.28.056.543.18.738.288.273.152.456.385.56.642l.132-.012c.312-.024.794-.038 1.158.108.37.148.689.487.88.716q.113.137.195.248h.582a2 2 0 0 1 1.99 2.199l-.272 2.715a3.5 3.5 0 0 1-.444 1.389l-1.395 2.441A1.5 1.5 0 0 1 12.42 16H6.118a1.5 1.5 0 0 1-1.342-.83l-1.215-2.43L1.07 8.589a1.517 1.517 0 0 1 2.373-1.852L5 8.293V1.75a1.75 1.75 0 0 1 3.5 0"/>
+                                      </svg> <b>On-Line</b></h5><br>
+                                </div>
+                            </div>
+                            <ul style="text-align: justify;">
+                                <h5><b> Objetivos do curso:</b></h5>
+                                <li class="list-group-item">
+                                      1. Compreender os princípios fundamentais do marketing, incluindo marketing digital, branding, pesquisa e planejamento de marketing;
+                                  <br>2. Compreender os conceitos de marketing, incluindo entender as tendências do mercado, analisar comportamentos de consumidores e interpretar dados de pesquisa de mercado;
+                                  <br>3. Aplicar conhecimentos de marketing em situações práticas, como o desenvolvimento de estratégias de marketing digital, implementação de táticas de branding e condução de pesquisas de mercado;
+                                  <br>4. Avaliar estratégias de marketing, campanhas publicitárias e resultados de pesquisa, e identificando padrões e relações;
+                                  <br>5. Avaliar a eficácia das estratégias de marketing, campanhas de branding, pesquisa de mercado e planos de marketing, usando critérios estabelecidos e padrões de desempenho;
+                                 </li>
+                            </ul>
+                    </div><br>
+                            <p class="text-start"><h4><b><i>Que tal se tornar um assistente de marketing? Neste curso você aprende sobre as técnicas e práticas do Marketing, desenvolve habilidades para pensar e agir com foco em resultados e conhece práticas gerenciais adotadas por empresas de sucesso.</b></i></h4>
+                            </p>
+                            <div class="text-center"><button type="submit" class="btn btn-success" onclick="sendToWhatsapp();" ><b>I N S C R E V A - S E</b></button>
+                            </div><br><br><br>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <section id="6">
+            <div class="row">
+                <div class="col"><hr class="border border-success border-2 opacity-50">
+                <h2><b>GESTÃO DE CUSTOS E EFICIÊNCIA NO AGRO NEGOCIO</b></h2><br><br>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./imagens/c6gestaocustoeficiencia.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="row">
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                </svg><b> +16 anos</b></h5>
+                                </div>
+                                <div class="col">
+                                <h5 style="background-color: #ffffff;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                            </svg><b> 40 horas</b></h5>
+                                </div>
+                                <div class="col">
+                                    <h5 style="background-color: #ffffff;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-walking" viewBox="0 0 16 16">
+                                        <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6.44 3.752A.75.75 0 0 1 7 3.5h1.445c.742 0 1.32.643 1.243 1.38l-.43 4.083a1.8 1.8 0 0 1-.088.395l-.318.906.213.242a.8.8 0 0 1 .114.175l2 4.25a.75.75 0 1 1-1.357.638l-1.956-4.154-1.68-1.921A.75.75 0 0 1 6 8.96l.138-2.613-.435.489-.464 2.786a.75.75 0 1 1-1.48-.246l.5-3a.75.75 0 0 1 .18-.375l2-2.25Z"/>
+                                        <path d="M6.25 11.745v-1.418l1.204 1.375.261.524a.8.8 0 0 1-.12.231l-2.5 3.25a.75.75 0 1 1-1.19-.914zm4.22-4.215-.494-.494.205-1.843.006-.067 1.124 1.124h1.44a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.531-.22Z"/>
+                                        </svg> <b>Presencial</b></h5><br>
+                                </div>
+                            </div>
+                            <ul style="text-align: justify;">
+                                <h5><b> Objetivos do curso:</b></h5><br>
+                                <li class="list-group-item">1. Conhecer os conceitos básicos de gestão de custos aplicados ao agronegócio;<br>
+                                                            2. Compreender os métodos de custeio e sua importância na análise de custos;<br>
+                                                            3. Aplicar estratégias para a redução de custos e aumento da eficiência produtiva;<br>
+                                                            4. Analisar orçamentos e realizar o planejamento financeiro de projetos no agronegócio;<br>
+                                                            5. Avaliar o desempenho financeiro por meio de indicadores e comparações de mercado;<br>
+                                                            6. Criar soluções inovadoras para otimizar custos e maximizar a rentabilidade no setor agropecuário.<br></li>
+                            </ul>
+                    </div><br>
+                            <p class="text-start"><h4><b><i>Maximize os resultados no agronegócio com gestão eficiente! No curso de Gestão de Custos e Eficiência no Agronegócio, aprenda a controlar despesas, otimizar processos e aumentar a produtividade. Esteja pronto para tomar decisões que impactam diretamente a rentabilidade do setor.</b></i></h4>
+                            </p>
+                            <div class="text-center"><button type="submit" class="btn btn-success" onclick="sendToWhatsapp();" ><b>I N S C R E V A - S E</b></button>
+                            </div><br><br><br>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+        </div> 
+    </div>
+</section>
+    <section id="contato">
+        <div class="container-fluid text-center">
+        <div class="section-title"><br>
+          <h2>CONTATO</h2><br><br>
+        </div>
+        <div class="row justify-content-center">  
+          <div class="col-lg-5 col-md-7" style="background-color: #1b6f2e;">
+            <h3><p style="text-decoration: #dfebe2;"><b><i>Fale conosco</i></b></p></h3><br>
+            <form action="">
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control" maxlength="50" required="" placeholder="Seu Nome" autocomplete="off">
+              </div>
+              <div class="form-group mt-3">
+                <input type="email" id="telefone" name="email" class="form-control" maxlength="50" required="" placeholder="Seu Telefone" autocomplete="email">
+              </div>
+              <div class="form-group mt-3">
+                <input type="email" id="email" name="email" class="form-control" maxlength="50" required="" placeholder="Seu Email" autocomplete="email">
+              </div>
+              <div class="form-group mt-3">
+                <textarea id="message" name="message" class="form-control" maxlength="300" cols="6" rows="4" placeholder="Envie sua Mensagem No WhatsApp" autocomplete="off" required=""></textarea>
+              </div><br>
+              <div class="text-center"><button type="submit" class="btn btn-light " onclick="sendToWhatsapp();" ><strong><b>E N V I A R </b></strong></button>
+               </div><br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+    <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="">
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2025 EFG - Todos os direitos Reservados.</span>
+    </div>
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    </ul>
+  </footer>
+</div>
+   <script src="./js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
